@@ -6,6 +6,7 @@ import java.text.NumberFormat;
  * 零利率方式
  */
 public class CalculatorService_2 implements CalculatorService{
+    @Override
     public String[] cal(Calculator calculator){
         double p = calculator.getP();
         return new String[]{
@@ -13,7 +14,7 @@ public class CalculatorService_2 implements CalculatorService{
                 "0"
         };
     }
-
+    @Override
     public String[][] details(Calculator calculator) {
         int m = calculator.getM();
         double p = calculator.getP();

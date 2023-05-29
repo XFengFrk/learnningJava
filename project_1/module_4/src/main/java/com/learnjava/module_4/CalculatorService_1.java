@@ -6,6 +6,7 @@ import java.text.NumberFormat;
  * 等额本金方式
  */
 public class CalculatorService_1 implements CalculatorService {
+    @Override
     public String[] cal(Calculator calculator){
         double yr = calculator.getYr();
         int m = calculator.getM();
@@ -24,7 +25,7 @@ public class CalculatorService_1 implements CalculatorService {
                 NumberFormat.getCurrencyInstance().format(payIntresetTotal)
         };
     }
-
+    @Override
     public String[][] details(Calculator calculator) {
         int m = calculator.getM();
         double yr = calculator.getYr();
