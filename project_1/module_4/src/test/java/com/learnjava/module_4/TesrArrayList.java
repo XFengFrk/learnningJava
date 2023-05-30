@@ -14,5 +14,9 @@ public class TesrArrayList {
         list.add("f");
 
         System.out.println(list);
+
+        for (Object e : list) {
+            System.out.println(e);
+        }
     }
 }
