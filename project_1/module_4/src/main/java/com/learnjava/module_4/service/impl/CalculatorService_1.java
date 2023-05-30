@@ -1,10 +1,15 @@
-package com.learnjava.module_4;
+package com.learnjava.module_4.service.impl;
+
+import com.learnjava.module_4.dto.Calculator;
+import com.learnjava.module_4.service.CalculatorService;
+import org.springframework.stereotype.Service;
 
 import java.text.NumberFormat;
 
 /**
  * 等额本金方式
  */
+@Service
 public class CalculatorService_1 implements CalculatorService {
     @Override
     public String[] cal(Calculator calculator){

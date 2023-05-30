@@ -1,11 +1,16 @@
-package com.learnjava.module_4;
+package com.learnjava.module_4.service.impl;
+
+import com.learnjava.module_4.dto.Calculator;
+import com.learnjava.module_4.service.CalculatorService;
+import org.springframework.stereotype.Service;
 
 import java.text.NumberFormat;
 
 /**
  * 零利率方式
  */
-public class CalculatorService_2 implements CalculatorService{
+@Service
+public class CalculatorService_2 implements CalculatorService {
     @Override
     public String[] cal(Calculator calculator){
         double p = calculator.getP();

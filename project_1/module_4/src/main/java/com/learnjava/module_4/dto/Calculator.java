@@ -1,4 +1,4 @@
-package com.learnjava.module_4;
+package com.learnjava.module_4.dto;
 
 import java.io.Serializable;
 //JavaBean
