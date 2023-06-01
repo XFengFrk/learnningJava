@@ -20,6 +20,7 @@ public class CalculatorController {
     @RequestMapping("/cal")
     @ResponseBody
     String[] cal(int type, Calculator c) {
+        check(c.getP(), c.getM(), c.getYr(), type);
         CalculatorService service = array[type];
         return service.cal(c);
     }
@@ -27,7 +28,23 @@ public class CalculatorController {
     @RequestMapping("/details")
     @ResponseBody
     String[][] details(int type, Calculator c) {
+        check(c.getP(), c.getM(), c.getYr(), type);
         CalculatorService service = array[type];
         return service.details(c);
+    }
+
+    static void check(double p, double m, double yr, int type) {
+        if (p <= 0) {
+            throw new IllegalArgumentException("贷款金额必须大于零");
+        }
+        if (m < 1 || m > 360) {
+            throw new IllegalArgumentException("贷款月份必须1~360之间");
+        }
+        if (yr < 1 || yr > 36) {
+            throw new IllegalArgumentException("年利率必须在1~36之间");
+        }
+        if (type != 1 && type != 0 && type != 2) {
+            throw new IllegalArgumentException("不支持的还款类型");
+        }
     }
 }
